@@ -9,8 +9,6 @@ annotation Harness::Subcommand
 end
 
 class Harness::Cli
-  class_getter program_name : String = "harness"
-
   class_getter stdin : IO = STDIN
   class_getter stdout : IO = STDOUT
   class_getter stderr : IO = STDERR

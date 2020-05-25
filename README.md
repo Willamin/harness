@@ -1,6 +1,6 @@
 # harness
 
-TODO: Write a description here
+Quickly helps setup an opinionated CLI harness.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      harness:
-       github: your-github-user/harness
+       github: Willamin/harness
    ```
 
 2. Run `shards install`
@@ -18,17 +18,20 @@ TODO: Write a description here
 
 ```crystal
 require "harness"
+
+class MyApp::Cli < Harness::Cli
+  @[Harness::Subcommand]
+  def version
+    STDOUT.puts("myapp 1.0.0")
+  end
+end
 ```
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+Create a subclass of the type `Harness::Cli`. This will get you setup with a harness for subcommand-style CLIs. To add a subcommand, write a method with the name of the subcommand and add the annotation `@[Harness::Subcommand]`. This tells the harness to listen for this subcommand.
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/harness/fork>)
+1. Fork it (<https://github.com/Willamin/harness/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +39,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Will Lewis](https://github.com/your-github-user) - creator and maintainer
+- [Will Lewis](https://github.com/Willamin) - creator and maintainer
