@@ -1,5 +1,8 @@
 # harness
 
+***Warning**: This tool is a work in progress. It has severe limitations. I'm working on this project in conjunction with another, extracting pieces of functionality that can belong in this package, able to be reused.*
+
+
 Quickly helps setup an opinionated CLI harness.
 
 ## Installation
